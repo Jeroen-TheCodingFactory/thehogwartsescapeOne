@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>The Hogwarts Escape</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main_hallway.css" />
+      <noscript>
+         <link rel="stylesheet" href="assets/css/noscript.css" />
+      </noscript>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+   </head>
+   <body class="is-preload">
+      <div id="wrapper" class="fade-in">
+         <header id="header">
+            <a href="index.html" class="logo">The Hogwarts Escape</a>
+         </header>
+         <nav id="nav">
+            <ul class="links">
+               <li class="active" ><a href="hintsgargoyles.html" target="_blank">Hints</a></li>
+            </ul>
+            <ul class="icons">
+               <li><a href="https://www.instagram.com/thehogwartsescape/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+               <li><a href="https://www.facebook.com/Hogwarts-Escape-103762194692067" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+         </nav>
+         <div id="main">
+            <article class="post featured">
+              <header class="major">
+									<h2>The Gargoyles</h2>
+								</header>
+									<p>
+									The door opens! But what a strange password.. You now enter a long, dark corridor with rows of gargoyles. They seem to be nothing more than statues, but when you and your friends take a step
+									forward they start to scream. “Bloody hell, that’s loud!" A visible forcefield appears in front of you, blocking you and your friends from
+									whatever is on the other side of the long corridor. You see Peeves fly through the forcefield while laughing maniacally, still singing the
+									same four lines of rhyme.
+									<br>
+									<a class="image main"><img src="images/gargoyles.png" alt="" /></a>
+									<br>
+									You won’t let this stop you from getting to the other side of the hallway. You take a closer look at the statues. The first gargoyle on your
+									right is creating a consistent gush of water, it looks so powerful that you don’t dare to step closer. The second gargoyle, across the room,
+									is spewing a wall of fire across the hall. You have figured out that the third gargoyle is the one screaming loudly, which is creating the
+									forcefield between you and the other side of the corridor. The fourth gargoyle, again to your right, is growing exponentially and nearly
+									looks like he is going to burst through the ceiling any second now. What can you do to get past the gargoyles?
+									</p>
+									<a class="image main"><img src="images/spellbookscrambled.png" alt="" /></a>
+									<p>
+									* note: You may want to print these pieces of paper to get a better look at the spells
+
+               <div class="row gtr-uniform">
+                  <div class="col-6 col-12-xsmall">
+                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="What spells should you use on the gargoyles?" />
+                  </div>
+                  <div class="col-12">
+                     <ul class="actions">
+                        <li><input type="button" id="myBtn"  value="Continue" class="primary" onclick="controleerAntwoord()" /></li>
+                     </ul>
+                  </div>
+               </div>
+               <ul class="actions special">
+                  <li><a href="door.html" class="button large">< Back</a></li>
+               </ul>
+            </article>
+         </div>
+         <div id="copyright">
+            <ul>
+               <li>&copy; Danique Valstar and Florine Komen, 2020</li>
+               <li>Design: <a href="https://html5up.net/">HTML5 UP</a></li>
+            </ul>
+         </div>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.html"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         function controleerAntwoord()
+         				{
+         					var opgegevenAntwoord, antwoord, i;
+         					opgegevenAntwoord = document.getElementById("demo-name").value;
+         					antwoord = ["Incendio, Aguamenti, Silencio, Reducio", "Incendio Aguamenti Silencio Reducio", "incendio, aguamenti, silencio, reducio", "incendio aguamenti silencio reducio"];
+         					for (i = 0; i < antwoord.length; i++)
+         					{
+
+         						if (antwoord.includes(opgegevenAntwoord))
+         							{
+         								redirect();
+
+         							}
+         						else
+         							{
+         								alert("You might want to open a book for once. Try again.");
+         								break;
+         							}
+         					}
+         				}
+         			function redirect()
+         				{
+         					window.location = "gargoyles2.html";
+         				}
+      </script>
+      <script>
+         var input = document.getElementById("demo-name");
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+           }
+         });
+      </script>
+   </body>
+</html>

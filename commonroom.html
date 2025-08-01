@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>The Hogwarts Escape</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main_commonroom.css" />
+      <noscript>
+         <link rel="stylesheet" href="assets/css/noscript.css" />
+      </noscript>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+   </head>
+   <body class="is-preload">
+      <div id="wrapper" class="fade-in">
+         <header id="header">
+            <a href="index.html" class="logo">The Hogwarts Escape</a>
+         </header>
+         <nav id="nav">
+            <ul class="links">
+               <li class="active" ><a href="hintscommonroom.html" target="_blank">Hints</a></li>
+            </ul>
+            <ul class="icons">
+               <li><a href="https://www.instagram.com/thehogwartsescape/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+               <li><a href="https://www.facebook.com/Hogwarts-Escape-103762194692067" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+         </nav>
+         <div id="main">
+            <article class="post featured">
+               <header class="major">
+									<h2>The Common Room</h2>
+								</header>
+									<p> After the sorting ceremony and a wonderful banquet it’s time to go to your common room.
+									Your Prefect introduces himself to your house as August Rabbot. You follow your Prefect through the castle.
+									The castle is even bigger than you imagined it to be, you think to yourself as you keep on walking. You pass
+									a group of giggling girls, followed by two boys holding a note on a piece of parchment written in red ink, which
+									looks to be a love letter. You would be interested to know what the love letter said if your eyes weren’t so heavy
+									and your stomach was less full from the amazing food. When you arrive at the end of a long corridor you can see a
+									simple, wooden oak door. August tells you this is the entrance to your common room and he explains how to open the
+									door: “To enter your common room you need to go through this door, but it’s locked with a puzzle! Solve this and you may enter".
+									<br><br>
+									You look and see that there’s something written on the door: <b>“I alternate, but do not create, I will equate but cannot deteriorate."</b>
+									<br>
+
+									</p>
+
+								<a class="image main"><img src="images/maze.png" alt="" /></a>
+
+               <div class="row gtr-uniform">
+                  <div class="col-6 col-12-xsmall">
+                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="What is the password of the common room?" />
+                  </div>
+                  <div class="col-12">
+                     <ul class="actions">
+                        <li><input type="button" id="myBtn"  value="Continue" class="primary" onclick="controleerAntwoord()" /></li>
+                     </ul>
+                  </div>
+               </div>
+               <ul class="actions special">
+                  <li><a href="sorting.html" class="button large">< Back</a></li>
+               </ul>
+            </article>
+         </div>
+         <div id="copyright">
+            <ul>
+               <li>&copy; Danique Valstar and Florine Komen, 2020</li>
+               <li>Design: <a href="https://html5up.net/">HTML5 UP</a></li>
+            </ul>
+         </div>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.html"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         function controleerAntwoord()
+         				{
+         					var opgegevenAntwoord, antwoord, i;
+         					opgegevenAntwoord = document.getElementById("demo-name").value;
+         					antwoord = ["Transfiguration", "transfiguration", "TRANSFIGURATION"];
+         					for (i = 0; i < antwoord.length; i++)
+         					{
+
+         						if (antwoord.includes(opgegevenAntwoord))
+         							{
+         								redirect();
+
+         							}
+         						else
+         							{
+         								alert("Maybe leave navigation to someone else? Try again.");
+         								break;
+         							}
+         					}
+         				}
+         			function redirect()
+         				{
+         					window.location = "hallway.html";
+         				}
+      </script>
+      <script>
+         var input = document.getElementById("demo-name");
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+           }
+         });
+      </script>
+   </body>
+</html>

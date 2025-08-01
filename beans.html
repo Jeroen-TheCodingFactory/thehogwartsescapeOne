@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>The Hogwarts Escape</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main_bertiebotts.css" />
+      <noscript>
+         <link rel="stylesheet" href="assets/css/noscript.css" />
+      </noscript>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+   </head>
+   <body class="is-preload">
+      <div id="wrapper" class="fade-in">
+         <header id="header">
+            <a href="index.html" class="logo">The Hogwarts Escape</a>
+         </header>
+         <nav id="nav">
+            <ul class="links">
+               <li class="active" ><a href="hintsbertiebotts.html" target="_blank">Hints</a></li>
+            </ul>
+            <ul class="icons">
+               <li><a href="https://www.instagram.com/thehogwartsescape/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+               <li><a href="https://www.facebook.com/Hogwarts-Escape-103762194692067" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+         </nav>
+         <div id="main">
+            <article class="post featured">
+               <header class="major">
+									<h2>Bertie Bott's Every-Flavour Beans</h2>
+									</header>
+									<p> You board the train looking for an empty compartment. You walk past a lot of busy compartments filled 
+									with enthusiastic chatter. You overhear some girls talking about love potions and in the hallway a muggle 
+									born boy is explaining the concept of mousetraps to two wizards. You keep looking for an empty spot on the 
+									train and find one at the end. You put your trunk in the corner and sit down next to the window. Before the 
+									train can depart your friends join the compartment.
+									<br><br>
+									A smiling, dimpled woman stops by your compartment to ask if you and your friends would like some sweets. 
+									You look at all the cart has to offer, you see Bertie Botts Every-Flavour Beans, Drooble’s Best Blowing Gum, Chocolate Frogs, 
+									Pumpkin Pasties, Cauldron Cakes, Liquorice Wands and lots more. You decide you have to try the famous Bertie Botts Every-Flavour 
+									Beans first. 
+									<br><br>
+									<b>You pay for four boxes as your friends look through different things from the trolley.     
+								
+									Now the tricky part about Bertie Botts Every-Flavour Beans is that you have to try and find the good flavours. </b><br>Maybe this chart will help:
+									</p>
+								
+								<a class="image main"><img src="images/bertiebotts.png" alt="" /></a>
+								<p> <b> Which ones are the good flavours? And more importantly: Which 4-digit code do the good flavours provide you with?  </b></p>
+								
+               
+               <div class="row gtr-uniform">
+                  <div class="col-6 col-12-xsmall">
+                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="Which beans are the good flavours?" />
+                  </div>
+                  <div class="col-12">
+                     <ul class="actions">
+                        <li><input type="button" id="myBtn"  value="Continue" class="primary" onclick="controleerAntwoord()" /></li>
+                     </ul>
+                  </div>
+               </div>
+               <ul class="actions special">
+                  <li><a href="train.html" class="button large">< Back</a></li>
+               </ul>
+            </article>
+         </div>
+         <div id="copyright">
+            <ul>
+               <li>&copy; Danique Valstar and Florine Komen, 2020</li>
+               <li>Design: <a href="https://html5up.net/">HTML5 UP</a></li>
+            </ul>
+         </div>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.html"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         function controleerAntwoord()			
+         				{
+         					var opgegevenAntwoord, antwoord, i;
+         					opgegevenAntwoord = document.getElementById("demo-name").value;
+         					antwoord = ["1467", "1 4 6 7", "1,4,6,7", "1, 4, 6, 7,", " 1467", "1.4.6.7", "1-4-6-7", "1 , 4 , 6 , 7"];
+         					for (i = 0; i < antwoord.length; i++)
+         					{
+         
+         						if (antwoord.includes(opgegevenAntwoord))
+         							{
+         								redirect();
+         
+         							}
+         						else  
+         							{
+         								alert("Blegh earwax flavour! I wanted apple. Try again.");
+         								break;
+         							}
+         					}
+         				}
+         			function redirect()
+         				{
+         					window.location = "lake.html";
+         				}
+      </script>
+      <script>
+         var input = document.getElementById("demo-name");
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+           }
+         });
+      </script>
+   </body>
+</html>

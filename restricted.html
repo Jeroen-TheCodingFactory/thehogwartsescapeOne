@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>The Hogwarts Escape</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main_restricted.css" />
+      <noscript>
+         <link rel="stylesheet" href="assets/css/noscript.css" />
+      </noscript>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+   </head>
+   <body class="is-preload">
+      <div id="wrapper" class="fade-in">
+         <header id="header">
+            <a href="index.html" class="logo">The Hogwarts Escape</a>
+         </header>
+         <nav id="nav">
+            <ul class="links">
+               <li class="active" ><a href="hintsrestrictedsection.html" target="_blank">Hints</a></li>
+            </ul>
+            <ul class="icons">
+               <li><a href="https://www.instagram.com/thehogwartsescape/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+               <li><a href="https://www.facebook.com/Hogwarts-Escape-103762194692067" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+         </nav>
+         <div id="main">
+            <article class="post featured">
+             	<header class="major">
+									<h2>The Restricted Section</h2>
+								</header>
+									<p>
+									Phew, you escaped the gaze of Mrs. Norris and probably weeks of detention. You’re ready to turn back when… Wait,
+									you realize you haven’t checked the restricted section yet. You convince your friends to turn around and look for Leonora in the
+									restricted section. Luckily, when you get back into the library, Mrs. Norris is now fast asleep on a tower of books on the opposite
+									side of the restricted section. You and your friends sneak towards the restricted section. When you get to the door of the restricted section,
+									you notice that it’s locked with another one of those bloody muggle combination locks. <br>
+									<a class="image main"><img src="images/lockcode.png" alt="" /></a>
+									</p>
+               <div class="row gtr-uniform">
+                  <div class="col-6 col-12-xsmall">
+                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="What is the correct code?" />
+                  </div>
+                  <div class="col-12">
+                     <ul class="actions">
+                        <li><input type="button" id="myBtn"  value="Continue" class="primary" onclick="controleerAntwoord()" /></li>
+                     </ul>
+                  </div>
+               </div>
+               <ul class="actions special">
+                  <li><a href="library.html" class="button large">< Back</a></li>
+               </ul>
+            </article>
+         </div>
+         <div id="copyright">
+            <ul>
+               <li>&copy; Danique Valstar and Florine Komen, 2020</li>
+               <li>Design: <a href="https://html5up.net/">HTML5 UP</a></li>
+            </ul>
+         </div>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.html"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         function controleerAntwoord()
+         				{
+         					var opgegevenAntwoord, antwoord, i;
+         					opgegevenAntwoord = document.getElementById("demo-name").value;
+         					antwoord = ["264", "2 6 4", "2, 6, 4", "2,6,4", "2-6-4"];
+         					for (i = 0; i < antwoord.length; i++)
+         					{
+
+         						if (antwoord.includes(opgegevenAntwoord))
+         							{
+         								redirect();
+
+         							}
+         						else
+         							{
+         								alert("You’d think I’d be good at these riddles seeing as I’m a computer. I’m not though and neither are you. Try again.");
+         								break;
+         							}
+         					}
+         				}
+         			function redirect()
+         				{
+         					window.location = "ceiling.html";
+         				}
+      </script>
+      <script>
+         var input = document.getElementById("demo-name");
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+           }
+         });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>The Hogwarts Escape</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main_dungeons.css" />
+      <noscript>
+         <link rel="stylesheet" href="assets/css/noscript.css" />
+      </noscript>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+   </head>
+   <body class="is-preload">
+      <div id="wrapper" class="fade-in">
+         <header id="header">
+            <a href="index.html" class="logo">The Hogwarts Escape</a>
+         </header>
+         <nav id="nav">
+            <ul class="links">
+               <li class="active" ><a href="hintspotionlab.html" target="_blank">Hints</a></li>
+            </ul>
+            <ul class="icons">
+               <li><a href="https://www.instagram.com/thehogwartsescape/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+               <li><a href="https://www.facebook.com/Hogwarts-Escape-103762194692067" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+         </nav>
+         <div id="main">
+            <article class="post featured">
+             	<header class="major">
+									<h2>Potions Class</h2>
+								</header>
+									<p>
+									It’s time for potions lesson so you walk to the dungeons. When you enter the classroom you see
+									‘The Forgetfulness Potion’ written on the board in chalk. You and Leonora have been doing
+									really well in this class, so you are surprised to find that she has a new partner today.
+									You don’t think anything of it though and decide to find another partner for yourself.
+									You sit down next to Leonora and her new partner, who’s name you think to be Serena. <br><br>
+
+									You learn that the Forgetfulness Potion has three main ingredients: Lethe River Water, Mistletoe Berries,
+									and Valerian Sprigs. While you’re brewing your potion with your new partner you can’t help but
+									notice the uneasy look Leonora has on her face. Maybe she is having a hard time with the potion?
+									You see that her new partner isn’t doing anything to help, she keeps staring out of the window and
+									chatting to the boy next to her. This is why it surprises you when the professor compliments their
+									potion and Serena takes all the credit. Leonora stays silent and just nods in agreement. This angers
+									you and you shoot a glance at your friends, who have also picked up on this. <br><br>
+
+									When class is over Leonora is the first person out of the classroom. You wait for Serena by the classroom door.
+									When she walks past, you stop her and confront her about taking
+									credit for Leonora’s potion. She laughs but it doesn’t sound sincere.
+									<br><br>
+									“You know nothing about that girl, why defend her? You don’t know the damage she has
+									caused so please keep your face out of my business.” She tries to walk away but you block
+									the door. You ask Serena what this means because your patience with her is really starting
+									to run out. “You think she’s so nice then, don’t you? Then why didn’t she tell your her real
+									last name. If you’re such good friends she must have told you about her family. Now let me
+									go or I will scream for the professor.”
+									<br><br>
+									Irritated by her words you let her walk out of the classroom. But as annoying as Serena is,
+									is she also a liar? Or is Leonora the one who is lying? You and your friends stare at each
+									other in confusion, but before one of you can say anything Serena turns around and shouts
+									that she left a clue to Leonora’s real last name in the potions classroom.
+									<a class="image main"><img src="images/potionsclass.png" alt="" /></a>
+
+
+									</p>
+               <div class="row gtr-uniform">
+                  <div class="col-6 col-12-xsmall">
+                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="What is Leonora's real last name?" />
+                  </div>
+                  <div class="col-12">
+                     <ul class="actions">
+                        <li><input type="button" id="myBtn"  value="Continue" class="primary" onclick="controleerAntwoord()" /></li>
+                     </ul>
+                  </div>
+               </div>
+               <ul class="actions special">
+                  <li><a href="pranks.html" class="button large">< Back</a></li>
+               </ul>
+            </article>
+         </div>
+         <div id="copyright">
+            <ul>
+               <li>&copy; Danique Valstar and Florine Komen, 2020</li>
+               <li>Design: <a href="https://html5up.net/">HTML5 UP</a></li>
+            </ul>
+         </div>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.html"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         function controleerAntwoord()
+         				{
+         					var opgegevenAntwoord, antwoord, i;
+         					opgegevenAntwoord = document.getElementById("demo-name").value;
+         					antwoord = ["Travers", "TRAVERS", "travers"];
+         					for (i = 0; i < antwoord.length; i++)
+         					{
+
+         						if (antwoord.includes(opgegevenAntwoord))
+         							{
+         								redirect();
+
+         							}
+         						else
+         							{
+         								alert("You might want to take some math lessons. Don’t they teach you that at Hogwarts? Try again.");
+         								break;
+         							}
+         					}
+         				}
+         			function redirect()
+         				{
+         					window.location = "wizardchess.html";
+         				}
+      </script>
+      <script>
+         var input = document.getElementById("demo-name");
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+           }
+         });
+      </script>
+   </body>
+</html>

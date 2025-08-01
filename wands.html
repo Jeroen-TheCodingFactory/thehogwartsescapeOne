@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title>The Hogwarts Escape</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="assets/css/main_diagonalley.css" />
+      <noscript>
+         <link rel="stylesheet" href="assets/css/noscript.css" />
+      </noscript>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+   </head>
+   <body class="is-preload">
+      <div id="wrapper" class="fade-in">
+         <header id="header">
+            <a href="index.html" class="logo">The Hogwarts Escape</a>
+         </header>
+         <nav id="nav">
+            <ul class="links">
+               <li class="active" ><a href="hintswandshop.html" target="_blank">Hints</a></li>
+            </ul>
+            <ul class="icons">
+               <li><a href="https://www.instagram.com/thehogwartsescape/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+               <li><a href="https://www.facebook.com/Hogwarts-Escape-103762194692067" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            </ul>
+         </nav>
+         <div id="main">
+            <article class="post featured">
+               <header class="major">
+                   <h2>Ollivander’s Wand Shop</h2>
+               </header>
+									<p>Congratulations! You guessed the correct order of your schoolbooks. You now own all eight books. You’re almost ready to go to Hogwarts. But what’s even more important than books? Your wand of course!<br><br>
+									A sign above the door has the words <i>‘Ollivanders: Makers of Fine Wands since 382 BC.”</i> written on it in gold letters.
+									You enter the narrow shop and you can hear the faint ringing of bell somewhere at the back of the shop.
+									Thousands of small boxes are piled to the ceiling, all of them labeled. As you look around you get the
+									feeling that the cleaning lady hasn’t been around here in ages, or maybe ever. Dust specks fly across
+									the room as the sunlight beams in through the windows. “Good afternoon.” You hear a soft voice speak behind you.
+									You turn around to find Garrick Ollivander himself looking at you. You don’t have to tell him you’re here to buy
+									your first wand, of course. Without question he takes a long tape measure with silver markings out of his pocket.
+									<br><br>
+									He measures you from shoulder to finger, then wrist to elbow, shoulder to floor, knee to armpit and around your head.
+									He tells you that every Ollivander wand has a core of powerful magical substance and that they use all kinds of different
+									wood for the wands. While the tape measure is still measuring you, Mr. Ollivander is looking around at the rows of piled boxes.
+									He hands you a few wands, but the first one gives you a small static shock and the second one somehow turns Mr. Ollivander’s
+									hair into a weirdly shaped mohawk. The third one doesn’t do anything, but Mr. Ollivander doesn’t seem discouraged.
+									<br><br>
+									“It’s really the wand that chooses the wizard, of course.” He tells you.
+
+									“Maybe, this one?” He takes out a box from one of the piles on his left and presents you with another wand.
+									<br><br>
+
+									<b>What type of wood and core is your wand made of?</b> <br>Ollivander wrote it down for you on this note below.</p>
+
+								<a class="image main"><img src="images/rebus.png" alt="" /></a>
+								<p>
+               <div class="row gtr-uniform">
+                  <div class="col-6 col-12-xsmall">
+                     <input type="text" name="demo-name" id="demo-name" value="" placeholder="What is your wand made of?" />
+                  </div>
+                  <div class="col-12">
+                     <ul class="actions">
+                        <li><input type="button" id="myBtn"  value="Continue" class="primary" onclick="controleerAntwoord()" /></li>
+                     </ul>
+                  </div>
+               </div>
+               <ul class="actions special">
+                  <li><a href="books.html" class="button large">< Back</a></li>
+               </ul>
+            </article>
+         </div>
+         <div id="copyright">
+            <ul>
+               <li>&copy; Danique Valstar and Florine Komen, 2020</li>
+               <li>Design: <a href="https://html5up.net/">HTML5 UP</a></li>
+            </ul>
+         </div>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.html"></script>
+      <script src="assets/js/main.js"></script>
+      <script>
+         function controleerAntwoord()
+         				{
+         					var opgegevenAntwoord, antwoord, i;
+         					opgegevenAntwoord = document.getElementById("demo-name").value;
+         					antwoord = ["black walnut dragon heartstring", "black walnut, dragon heartstring", "black walnut and dragon heartstring", "black walnut, and dragon heartstring", "Black walnut dragon heartstring", "black walnut dragon heart string"];
+         					for (i = 0; i < antwoord.length; i++)
+         					{
+
+         						if (antwoord.includes(opgegevenAntwoord))
+         							{
+         								redirect();
+
+         							}
+         						else
+         							{
+         								alert("Maybe you wand to try again?");
+         								break;
+         							}
+         					}
+         				}
+         			function redirect()
+         				{
+         					window.location = "train.html";
+         				}
+      </script>
+      <script>
+         var input = document.getElementById("demo-name");
+         input.addEventListener("keyup", function(event) {
+           if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("myBtn").click();
+           }
+         });
+      </script>
+   </body>
+</html>

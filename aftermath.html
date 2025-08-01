@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The Hogwarts Escape</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main_duel.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+		<script>
+				function controleerAntwoord()			
+				{
+					var opgegevenAntwoord, antwoord, i;
+					opgegevenAntwoord = document.getElementById("demo-name").value;
+					antwoord = ["Petrificus Totalus", "petrificus totalus", "petrificustotalus", "Petrificustotalus", "Petrificus totalus", "PETRIFICUS TOTALUS"];
+					for (i = 0; i < antwoord.length; i++)
+					{
+						if (antwoord.includes(opgegevenAntwoord))
+							{
+								redirect();
+							}
+						else  
+							{
+								alert("Your final spell fails. Your opponents totally kick your behind and you will forever be known as the loser of this duel. A lifetime of mortifying shame. Will you ever recover? Try again. ");
+								break;
+							}
+					}
+				}	
+			function redirect()
+				{
+					window.location = "finalexam.html";
+				}
+		</script>
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">The Hogwarts Escape</a>
+					</header>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active" ><a href="hintsduel.html" target="_blank">Hints</a></li>
+						</ul>  
+						<ul class="icons">
+							<li><a href="https://www.instagram.com/thehogwartsescape/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.facebook.com/Hogwarts-Escape-103762194692067" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						</ul>
+					</nav>
+				<!-- Main -->
+					<div id="main">
+
+							<article class="post featured">
+								<header class="major">
+									<h2>The Aftermath</h2>
+								</header>
+									<p>
+									Leonora and you both use Petrificus Totalus successfully. Silas and Galen are both lying frozen on the ground. 
+									Your heart is still beating fast as you turn to Leonora and ask her why she never told you any of this. She 
+									tells you that she was ashamed of what her family did and that she cannot blame Silas or Galen. She continues 
+									to explain that her family didn’t kill the Bulstrodes or the Carrows, but that when her family decided to leave 
+									the Death Eaters after the Second Wizarding War, they exposed secrets about all the pureblood families who left. 
+									This resulted in a feud between all the families who still stayed true to The Dark Lord and the families who turned 
+									their backs on him. Unfortunately some fanatics felt that all traitors who left the Death Eaters should be killed 
+									and that is exactly what happened. However, when they arrived at the Travers family home, they had been expecting 
+									them and only Leonora’s grandad got killed in the fight. The families who lost so many lives always blamed 
+									the Travers family ever since. 
+									<br><br>
+									You respond by telling her that you understand their pain but that she shouldn’t have to pay 
+									for her family's’ mistakes. Leonora gives you a weak smile, but you can see that she’s still 
+									unsure about it. 
+									<br><br>
+									Your friends finally catch up with you. They look at Silas and Galen and back to you and Leonora. Right when they’re about to ask something two professors come running up to you. The adrenaline of the fight and the feeling of victory slowly start to fade away when you realize what this could mean.
+
+									</p>
+								<ul class="actions special">
+									<li><a href="duelcards.html" class="button large">< Back</a></li>
+									<li><a href="finalexam.html" class="button large">Let's hope we don't get detention!</a></li>
+								</ul>
+							</article>
+					</div>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Danique Valstar and Florine Komen, 2020</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
